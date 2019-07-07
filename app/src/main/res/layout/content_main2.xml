@@ -1,0 +1,75 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SampleActivity">
+
+
+    <Button
+        android:id="@+id/btnAdMob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admob Ad"
+        android:minWidth="200dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/btnMoPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MoPub Ad"
+        android:minWidth="200dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdMob"
+        />
+
+    <Button
+        android:id="@+id/btnConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connected Ad"
+        android:layout_marginTop="5dp"
+        android:minWidth="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMoPub" />
+
+    <Button
+        android:id="@+id/btnMediation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mediation"
+        android:layout_marginTop="5dp"
+        android:minWidth="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConnected" />
+
+
+
+
+
+
+    <com.gizmeon.connectedsdk.ConnectedAdBanner
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:adv_BannerSize="Auto"
+        app:adv_IsAutoStart="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMediation"
+
+        />
+
+
+</android.support.constraint.ConstraintLayout>
